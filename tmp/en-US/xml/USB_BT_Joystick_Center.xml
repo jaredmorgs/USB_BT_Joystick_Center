@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "USB_BT_Joystick_Center.ent">
+%BOOK_ENTITIES;
+]>
+<book>
+	<!--  This document was created with Syntext Serna Free.  --> <xi:include href="Book_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <chapter>
+		<title>Introduction</title>
+		 <para>
+			Thank you for downloading USB/BT Joystick Centre.
+		</para>
+		 <para>
+		</para>
+
+	</chapter>
+	 <chapter>
+		<title>Main Screen</title>
+		 <para>
+			When you start the application for the first time, the main screen is displayed.
+		</para>
+		 <mediaobject>
+			<imageobject>
+				<imagedata fileref="images/Main_Screen.png" format="PNG" />
+			</imageobject>
+
+		</mediaobject>
+
+	</chapter>
+	 <chapter>
+		<title>Connect a Controller</title>
+		 <procedure>
+			<title>Configuring Input Methods</title>
+			 <para>
+				Before using &PRODUCT; to control an application for the first time, you need to authorize the application as a valid input method (IME).
+			</para>
+			 <para>
+				Follow these steps to authorize &PRODUCT; as an input method on the device.
+			</para>
+			 <step>
+				<para>
+					Tap the <guibutton>IME</guibutton> slider to open the Android Language and Input settings.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					In the Keyboard &amp; Input Methods group, tap the USBJoyIME checkbox.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					In the Attention dialog box, read and accept the warning and tap <guibutton>OK</guibutton>.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					Exit the Android Language and Input settings screen.
+				</para>
+				 <para>
+					&PRODUCT; is now configured as an IME
+				</para>
+
+			</step>
+
+		</procedure>
+		
+		 <procedure>
+			<title>Select Input Method</title>
+			 <step>
+				<para>
+					Tap the <guibutton>IME</guibutton> Button to open the Input Method menu.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					Select USBJoyIME to set &PRODUCT; as the input method, until the application is closed.
+				</para>
+				 <note>
+					<para>
+						Once this setting is activated, you will not be able to use other input methods, such as on-screen keyboards.
+					</para>
+
+				</note>
+
+			</step>
+
+		</procedure>
+		
+		 <procedure>
+			<title>Connect USB Device</title>
+			 <para>
+				Follow this procedure to connect a USB device and detect it using &PRODUCT;
+			</para>
+			 <step>
+				<para>
+					Plug the cable into the device.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					Tap SEARCH to detect the device.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					The controller is detected, and it's name is displayed as a button in the main screen.
+				</para>
+
+			</step>
+
+		</procedure>
+		
+		 <procedure>
+			<title>Connect Bluetooth Device</title>
+			 <para>
+				Follow this procedure to pair and detect a Bluetooth controller with &PRODUCT;.
+			</para>
+			 <step>
+				<para>
+					Tap the <guibutton>BT</guibutton> slider to turn on Bluetooth.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					Tap <guibutton>Yes</guibutton> on the Bluetooth permission request menu to activate Bluetooth on the device.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					On the controller, activate Bluetooth pairing mode.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					On the device, tap SEARCH.
+				</para>
+
+			</step>
+			 <step>
+				<para>
+					The controller is detected, and it's name is displayed as a button in the main screen.
+				</para>
+
+			</step>
+
+		</procedure>
+		
+
+	</chapter>
+	 <xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+</book>
+
