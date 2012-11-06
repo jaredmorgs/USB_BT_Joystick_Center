@@ -7,8 +7,43 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
   <chapter>
     <title>Introduction</title>
-    <para>Thank you for downloading USB/BT Joystick Centre. </para>
+    <para>Thank you for downloading &PRODUCT;.</para>
+    <para>If you have not used the application before, read </para>
+    <para>If you are having issues with getting your Android device to work with the application, read     &lt; link to Known Issues post&gt; to check if your device is not compatible.</para>
+    <para>If you are having issues with getting your controller working with the application, read</para>
     <para/>
+  </chapter>
+  <chapter id="Quick_Start">
+    <title>Quick Start</title>
+    <para>Using &PRODUCT; to play Android games on your phone or tablet is designed to be as easy as possible.</para>
+    <para>The basic work flow is:</para>
+    <orderedlist>
+      <listitem>
+        <para>Start &PRODUCT;</para>
+      </listitem>
+      <listitem>
+        <para>Tap the IME slider to select USBJoyIME as the input method.</para>
+      </listitem>
+      <listitem>
+        <para>If this is the first time you have used &PRODUCT;, authorize it as a valid input method in the Android Settings.</para>
+      </listitem>
+      <listitem>
+        <para>Plug in the USB controller, or tap the BT slider to activate Bluetooth.</para>
+      </listitem>
+      <listitem>
+        <para>If your controller is a Bluetooth controller, activate pairing mode on the controller.</para>
+      </listitem>
+      <listitem>
+        <para>Tap SEARCH in the Main Screen.</para>
+      </listitem>
+      <listitem>
+        <para>Once the controller is detected, tap the controller icon.</para>
+      </listitem>
+      <listitem>
+        <para>The controller is now the input device for the Android device.</para>
+        <para>You can now begin mapping buttons to game controls.</para>
+      </listitem>
+    </orderedlist>
   </chapter>
   <chapter>
     <title>Main Screen</title>
@@ -19,7 +54,7 @@
       </imageobject>
     </mediaobject>
   </chapter>
-  <chapter>
+  <chapter id="Connect_A_Controller">
     <title>Connect a Controller</title>
     <procedure>
       <title>Configuring Input Methods</title>
@@ -77,12 +112,283 @@
         <para>On the controller, activate Bluetooth pairing mode.</para>
       </step>
       <step>
-        <para>On the device, tap SEARCH.</para>
+        <para>In &PRODUCT;, tap SEARCH.</para>
       </step>
       <step>
         <para>The controller is detected, and it&apos;s name is displayed as a button in the main screen.</para>
       </step>
     </procedure>
+  </chapter>
+  <chapter>
+    <title>Map buttons</title>
+    <para>How you map buttons in &PRODUCT; depends on the support the game or application has for physical controllers (instead of touch screen controls).</para>
+    <section>
+      <title>Apps with Controller Support</title>
+      <para/>
+    </section>
+    <section>
+      <title>Apps with On-screen Controller Support</title>
+      <para/>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Frequently Asked Questions About Phones and Tablets</title>
+    <qandaset>
+      <title>Samsung Questions</title>
+<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+        <question>
+          <para>Why can&apos;t I use the Wii Controller with the Samsung Galaxy S 3 (SGS3), and other new model Samsung handsets. </para>
+        </question>
+        <answer>
+          <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
+          <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
+          <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
+        </answer>
+      </qandaentry>
+      <qandaentry>
+        <question>
+          <para>What controllers can I use for sure  with the Samsung Galaxy S 3 (SGS3) </para>
+        </question>
+        <answer>
+          <para>The  iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing..</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>Nexus Questions</title>
+<!--Taken from Nexus: No Touch-Mapping Mode and no Button response in game FAQ post.-->      <qandaentry>
+        <question>
+          <para>No touch mapping mode in Joystick2Touch, and no response in game  </para>
+        </question>
+        <answer>
+          <para>To fix this issue, you need to touch the Joystick2Touch icon in the task list once you are in the game you want to play. Don&apos;t ask me why. This is a peculiarity of this device.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>Telcast P76TI Tablet Questions</title>
+      <qandaentry>
+        <question>
+          <para>How do I add USB Host API support to my device.   </para>
+        </question>
+        <answer>
+          <para>You will encounter an issue with missing Bluetooth drivers on some custom ROMs.</para>
+          <para>These instructions may apply to other devices, however your results may vary. Your table must be rooted to complete these steps. </para>
+          <orderedlist>
+            <listitem>
+              <para>Install this ROM: <ulink url="http://forum.xda-developers.com/showthread.php?t=1499124"/> (current as of 17th April 2012)</para>
+            </listitem>
+            <listitem>
+              <para>Download Root Browser from Google Play.</para>
+            </listitem>
+            <listitem>
+              <para>Navigate to the <filename>/system/etc/permission/</filename> directory.</para>
+            </listitem>
+            <listitem>
+              <para>Create a file named <filename>android.hardware.usb.host.xml</filename>.</para>
+            </listitem>
+            <listitem>
+              <para>Paste the following text into the file.</para>
+              <programlisting language="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--&gt;
+
+&lt;!-- This is the standard feature indicating that the device can communicate
+    with USB devices as the USB host. --&gt;
+&lt;permissions&gt;
+    &lt;feature name=&quot;android.hardware.usb.host&quot; /&gt;
+&lt;/permissions&gt;</programlisting>
+            </listitem>
+            <listitem>
+              <para>Reboot device to activate </para>
+            </listitem>
+          </orderedlist>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>HTC Questions</title>
+<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+        <question>
+          <para>Why can&apos;t I use the Wii Controller with the HTC One X </para>
+        </question>
+        <answer>
+          <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
+          <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
+          <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
+        </answer>
+      </qandaentry>
+      <qandaentry>
+        <question>
+          <para>What controllers can I use for sure  with the HTC One X </para>
+        </question>
+        <answer>
+          <para>The  iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing..</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>General Questions</title>
+      <qandaentry>
+        <question>
+          <para>How can I test whether &PRODUCT; will work on my device.</para>
+        </question>
+        <answer>
+          <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
+        </answer>
+      </qandaentry>
+<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->      <qandaentry>
+        <question>
+          <para>How do I solve the &quot;Memory Crash: Out of Memory&quot; error.</para>
+        </question>
+        <answer>
+          <para> This is caused by an issue in a system file used by &PRODUCT;. This affects Samsung handsets mostly, however other handsets may be affected.</para>
+          <para/>
+          <orderedlist>
+            <listitem>
+              <para>Your device needs to be rooted.</para>
+            </listitem>
+            <listitem>
+              <para>Using the Root Explorer application (download from Google Play), navigate to the <filename>/system/data/app</filename> folder.</para>
+            </listitem>
+            <listitem>
+              <para>Locate the file named similar to <filename>com.poke64738.usbjoy-1.odex</filename>. The important info in the file you need to locate are  the words &quot;usbjoy&quot; and &quot;odex&quot;.</para>
+            </listitem>
+            <listitem>
+              <para>Delete this file.</para>
+            </listitem>
+            <listitem>
+              <para>Reinstall &PRODUCT; from Google Play.</para>
+            </listitem>
+          </orderedlist>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>XPeria Play Questions</title>
+      <qandaentry>
+        <question>
+          <para>I&apos;m looking for a quick tutorial on how to set up &PRODUCT; on my device. What is a recommended tutorial?</para>
+        </question>
+        <answer>
+          <para>Visit <ulink url="http://www.xperiagamer.com/PLAY-Apps-Tweaks/usb-bt-joystick-center-6.html"/> for an excellent tutorial. </para>
+        </answer>
+      </qandaentry>
+<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->    </qandaset>
+  </chapter>
+  <chapter>
+    <title>Frequently Asked Questions About Controllers</title>
+    <qandaset>
+      <title>PhoneJoy Questions</title>
+<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+        <question>
+          <para>Where are some tutorials for setting up this controller? </para>
+        </question>
+        <answer>
+          <para>THe official website has a screen-by-screen tutorial. View it at <ulink url="http://www.phonejoy.us/support/getting-started/android/usbbt-joystick-center/"/> .</para>
+        </answer>
+      </qandaentry>
+      <qandaentry>
+        <question>
+          <para>What controllers can I use for sure  with the Samsung Galaxy S 3 (SGS3) </para>
+        </question>
+        <answer>
+          <para>.THe iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>Nexus Questions</title>
+<!--Taken from Nexus: No Touch-Mapping Mode and no Button response in game FAQ post.-->      <qandaentry>
+        <question>
+          <para>No touch mapping mode in Joystick2Touch, and no response in game  </para>
+        </question>
+        <answer>
+          <para>To fix this issue, you need to touch the Joystick2Touch icon in the task list once you are in the game you want to play. Don&apos;t ask me why. This is a peculiarity of this device.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>HTC Questions</title>
+<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+        <question>
+          <para>Why can&apos;t I use the Wii Controller with the HTC One X </para>
+        </question>
+        <answer>
+          <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
+          <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
+          <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
+        </answer>
+      </qandaentry>
+      <qandaentry>
+        <question>
+          <para>What controllers can I use for sure  with the HTC One X </para>
+        </question>
+        <answer>
+          <para>.THe iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing..</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>General Questions</title>
+      <qandaentry>
+        <question>
+          <para>How can I test whether &PRODUCT; will work on my device.</para>
+        </question>
+        <answer>
+          <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
+        </answer>
+      </qandaentry>
+<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->      <qandaentry>
+        <question>
+          <para>How do I solve the &quot;Memory Crash: Out of Memory&quot; error.</para>
+        </question>
+        <answer>
+          <para> This is caused by an issue in a system file used by &PRODUCT;. This affects Samsung handsets mostly, however other handsets may be affected.</para>
+          <para/>
+          <orderedlist>
+            <listitem>
+              <para>Your device needs to be rooted.</para>
+            </listitem>
+            <listitem>
+              <para>Using the Root Explorer application (download from Google Play), navigate to the <filename>/system/data/app</filename> folder.</para>
+            </listitem>
+            <listitem>
+              <para>Locate the file named similar to <filename>com.poke64738.usbjoy-1.odex</filename>. The important info is the words &quot;usbjoy&quot; and &quot;odex&quot;.</para>
+            </listitem>
+            <listitem>
+              <para>Delete this file.</para>
+            </listitem>
+            <listitem>
+              <para>Reinstall &PRODUCT; from Google Play.</para>
+            </listitem>
+          </orderedlist>
+        </answer>
+      </qandaentry>
+    </qandaset>
+    <qandaset>
+      <title>XPeria Play Questions</title>
+      <qandaentry>
+        <question>
+          <para>I&apos;m looking for a quick tutorial on how to set up &PRODUCT; on my device. What is a recommended tutorial?</para>
+        </question>
+        <answer>
+          <para>Visit <ulink url="http://www.xperiagamer.com/PLAY-Apps-Tweaks/usb-bt-joystick-center-6.html"/> for an excellent tutorial. </para>
+        </answer>
+      </qandaentry>
+<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->    </qandaset>
   </chapter>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Revision_History.xml"/>
 </book>
