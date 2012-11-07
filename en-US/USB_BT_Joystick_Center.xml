@@ -8,7 +8,7 @@
   <chapter>
     <title>Introduction</title>
     <para>Thank you for downloading &PRODUCT;.</para>
-    <para>If you have not used the application before, read </para>
+    <para>If you have not used the application before, read <xref linkend="Quick_Start"/> and <xref linkend="Connect_A_Controller"/></para>
     <para>If you are having issues with getting your Android device to work with the application, read     &lt; link to Known Issues post&gt; to check if your device is not compatible.</para>
     <para>If you are having issues with getting your controller working with the application, read</para>
     <para/>
@@ -45,7 +45,7 @@
       </listitem>
     </orderedlist>
   </chapter>
-  <chapter>
+  <chapter id="Main_Screen">
     <title>Main Screen</title>
     <para>When you start the application for the first time, the main screen is displayed.</para>
     <mediaobject>
@@ -53,6 +53,36 @@
         <imagedata fileref="images/Main_Screen.png" format="PNG"/>
       </imageobject>
     </mediaobject>
+    <para>The following buttons and sliders are used to activate different modes in &PRODUCT;</para>
+    <variablelist>
+      <varlistentry>
+        <term>IME</term>
+        <listitem>
+          <para>Tap this slider to select USBJoyIME. This is the name for &PRODUCT; registered in the Android Input Select settings. If this slider is not set to On (yellow), you can not use joysticks, game pads, or keyboards with the game.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>BT</term>
+        <listitem>
+          <para>Tap this slider to activate Bluetooth within the application. If Bluetooth is not already activated on your device, tapping this slider will turn on Bluetooth, and activate the Bluetooth service in &PRODUCT;.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>A</term>
+        <listitem>
+          <para>Tap this slider to activate AnalogKey mode for MUPEN64Plus AE and FPSe emulators. If you are not using either of these emulators, then do not activate this slider.</para>
+          <note>
+            <para>Ensure you map the analog stick to the Analog-Key in the settings of these emulators. Once the stick is mapped correctly, you can control characters using the analog method, rather than the digital D-pad.</para>
+          </note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>J&gt;T</term>
+        <listitem>
+          <para/>
+        </listitem>
+      </varlistentry>
+    </variablelist>
   </chapter>
   <chapter id="Connect_A_Controller">
     <title>Connect a Controller</title>
@@ -122,29 +152,29 @@
       <para>If you are having problems detecting the controller using Bluetooth, refer to the section that relates to your controller in <xref linkend="FAQ_About_Controllers"/> for help with troubleshooting.</para>
     </note>
   </chapter>
-  <chapter>
+  <chapter id="Map_Buttons">
     <title>Map buttons</title>
     <para>How you map buttons in &PRODUCT; depends on whether the game or application features support for physical controllers (instead of touch screen controls), or whether the game or application is touchscreen only (on-screen controllers).</para>
-    <section>
+    <section id="Physical_Controller_Support">
       <title>Physical Controller Support</title>
       <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;.</para>
     </section>
-    <section>
+    <section id="On-screen_Controller_Support">
       <title>On-screen Controller Support</title>
       <para>Many applications on touchscreen devices use a virtual keyboard or virtual D-pad and buttons to control the game. Some games have no visible buttons, however there are regions on the screen that activate certain game features.</para>
       <para>To use these applications with &PRODUCT;, you need to install a free add-on  called &JOY2TOUCH;. </para>
       <para>The application can be obtained initially by tapping the <guibutton>J&gt;T</guibutton> slider, which prompts you to select an application to open the link with. If you select Google Play, you will be taken directly to the download page for &JOY2TOUCH;.</para>
     </section>
-    <section>
+    <section id="Keyboard_Mouse_Support">
       <title>Keyboard and Mouse Support</title>
       <para>Add the &quot;Mouse after pressing the &quot;Search&quot; Button not found (6.x)&quot; FAQ post here.</para>
     </section>
   </chapter>
-  <chapter>
+  <chapter id="FAQ_About_Phones_Tablets">
     <title>Frequently Asked Questions About Phones and Tablets</title>
     <qandaset>
       <title>Samsung Questions</title>
-<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>Why can&apos;t I use the Wii Controller with the Samsung Galaxy S 3 (SGS3), and other new model Samsung handsets. </para>
         </question>
@@ -174,7 +204,7 @@
     </qandaset>
     <qandaset>
       <title>Nexus Questions</title>
-<!--Taken from Nexus: No Touch-Mapping Mode and no Button response in game FAQ post.-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>No touch mapping mode in Joystick2Touch, and no response in game  </para>
         </question>
@@ -238,7 +268,7 @@
     </qandaset>
     <qandaset>
       <title>HTC Questions</title>
-<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>Why can&apos;t I use the Wii Controller with the HTC One X </para>
         </question>
@@ -267,7 +297,7 @@
           <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
         </answer>
       </qandaentry>
-<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>How do I solve the &quot;Memory Crash: Out of Memory&quot; error.</para>
         </question>
@@ -293,6 +323,56 @@
           </orderedlist>
         </answer>
       </qandaentry>
+      <qandaentry>
+        <question>
+          <para>How do I add USB Host API support to my device.   </para>
+        </question>
+        <answer>
+          <para>You will encounter an issue with missing Bluetooth drivers on some custom ROMs.</para>
+          <para>These instructions are generic. Your table must be rooted to complete these steps. </para>
+          <orderedlist>
+            <listitem>
+              <para>Install a custom ROM compatible with your device that includes support for the  USB Host API. Read the XDA Forum ROM page for clues to whether the ROM contains this component. </para>
+            </listitem>
+            <listitem>
+              <para>Download Root Browser from Google Play.</para>
+            </listitem>
+            <listitem>
+              <para>Navigate to the <filename>/system/etc/permission/</filename> directory.</para>
+            </listitem>
+            <listitem>
+              <para>Create a file named <filename>android.hardware.usb.host.xml</filename>.</para>
+            </listitem>
+            <listitem>
+              <para>Paste the following text into the file.</para>
+              <programlisting language="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--&gt;
+
+&lt;!-- This is the standard feature indicating that the device can communicate
+    with USB devices as the USB host. --&gt;
+&lt;permissions&gt;
+    &lt;feature name=&quot;android.hardware.usb.host&quot; /&gt;
+&lt;/permissions&gt;</programlisting>
+            </listitem>
+            <listitem>
+              <para>Reboot device to activate.</para>
+            </listitem>
+          </orderedlist>
+        </answer>
+      </qandaentry>
     </qandaset>
     <qandaset>
       <title>XPeria Play Questions</title>
@@ -313,7 +393,7 @@
           <para>You must also enable the <guibutton>J&gt;T</guibutton> slider for the touch pad to operate correctly.</para>
         </answer>
       </qandaentry>
-<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->    </qandaset>
+    </qandaset>
   </chapter>
   <chapter id="FAQ_About_Controllers">
     <title>Frequently Asked Questions About Controllers</title>
