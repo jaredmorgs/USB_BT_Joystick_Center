@@ -7,10 +7,10 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
   <chapter>
     <title>Introduction</title>
-    <para>Thank you for downloading &PRODUCT;.</para>
-    <para>If you have not used the application before, read <xref linkend="Quick_Start"/> and <xref linkend="Connect_A_Controller"/></para>
-    <para>If you are having issues with getting your Android device to work with the application, read     &lt; link to Known Issues post&gt; to check if your device is not compatible.</para>
-    <para>If you are having issues with getting your controller working with the application, read</para>
+    <para>Thank you for downloading &PRODUCT;. Read this guide to learn how to get the most out of &PRODUCT; and &JOY2TOUCH;.</para>
+    <para>If this is your first time using either application, read <xref linkend="Quick_Start"/>, <xref linkend="Main_Screen"/> and <xref linkend="Connect_A_Controller"/> to familiarize yourself with the interface, and </para>
+    <para>If you are having issues with getting your Android device to work with the application, read <xref linkend="FAQ_About_Phones_Tablets"/>.</para>
+    <para>If you are having issues with getting your controller working with the application, read <xref linkend="FAQ_About_Controllers"/></para>
     <para/>
   </chapter>
   <chapter id="Quick_Start">
@@ -79,7 +79,14 @@
       <varlistentry>
         <term>J&gt;T</term>
         <listitem>
-          <para/>
+          <para>Tap this slider to activate the &JOY2TOUCH;. This application  allows touch screen events to be mapped to controller button presses, or keyboard and mouse actions. </para>
+          <para>For more information about &JOY2TOUCH;, refer to <xref linkend="On-screen_Controller_Support"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>SEARCH</term>
+        <listitem>
+          <para>Tap this button to begin searching for USB and Bluetooth controllers, which have been plugged into the device, or set to Bluetooth discover/pairing mode.</para>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -157,7 +164,7 @@
     <para>How you map buttons in &PRODUCT; depends on whether the game or application features support for physical controllers (instead of touch screen controls), or whether the game or application is touchscreen only (on-screen controllers).</para>
     <section id="Physical_Controller_Support">
       <title>Physical Controller Support</title>
-      <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;.</para>
+      <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;. All you should need to do is map the physical controller keys on your joystick to the controller map present in the game.</para>
     </section>
     <section id="On-screen_Controller_Support">
       <title>On-screen Controller Support</title>
@@ -463,7 +470,7 @@
           <para>I have an original PS3 Sixaxis controller made by Sony, but it can not be found by &PRODUCT;. What do I need to do to make it work?</para>
         </question>
         <answer>
-          <para>You can not use the standard Bluetooth stack in phones and tables with PS3 controllers because of the enhanced data rate they need to send signals. You need to use a USB Bluetooth CSR &quot;2.x/EDR+&quot; Dongle so the PS3 controller has the correct Enhanced Data Rate tunnel. An example of such a dongle is <ulink url="http://dx.com/p/ultra-mini-bluetooth-2-1-edr-usb-2-0-dongle-37665"/></para>
+          <para>You can not use the standard Bluetooth stack in phones and tables with PS3 controllers because of the enhanced data rate they need to send signals. You need to use a USB Bluetooth Cambridge Silicon Radio (CSR) &quot;2.x/EDR+&quot; Dongle so the PS3 controller has the correct Enhanced Data Rate tunnel. An example of such a dongle is <ulink url="http://dx.com/p/ultra-mini-bluetooth-2-1-edr-usb-2-0-dongle-37665"/></para>
           <orderedlist>
             <listitem>
               <para>Plug in the USB Dongle. </para>
