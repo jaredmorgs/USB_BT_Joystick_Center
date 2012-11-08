@@ -8,6 +8,20 @@
   <simpara>
     <revhistory>
       <revision>
+        <revnumber>6.1-2</revnumber>
+        <date>Thu Nov 8 2012</date>
+        <author>
+          <firstname>Jared</firstname>
+          <surname>Morgan.</surname>
+          <email>jaredleonmorgan@gmail.com</email>
+        </author>
+        <revdescription>
+          <simplelist>
+            <member>This version incorporates the FAQ section from the forum, links to helpful YouTube tutorials, and also references the &JOY2TOUCH; user guide, which contains all the touchscreen-related configuration.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
         <revnumber>6.1-1</revnumber>
         <date>Mon Nov 5 2012</date>
         <author>
