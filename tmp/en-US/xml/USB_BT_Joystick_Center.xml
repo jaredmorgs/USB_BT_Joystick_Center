@@ -335,11 +335,8 @@
 				The application can be obtained initially by tapping the <guibutton>J&gt;T</guibutton> slider, which prompts you to select an application to open the link with. If you select Google Play, you will be taken directly to the download page for &JOY2TOUCH;.
 			</para>
 			 <para>
-				For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio's <citetitle>The Pinball Arcade</citetitle>, refer to this Green Robot Gamer YouTube tutorial.
+				For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio's <citetitle>The Pinball Arcade</citetitle>, refer to this <ulink url="http://www.youtube.com/watch?v=bFMRcaSSkuI">Green Robot Gamer YouTube tutorial</ulink>. The Pinball Arcade uses touch screen regions to control flippers and other table-specific controls, and the tutorial is a good example of configuring on-screen controller support for other games.
 			</para>
-			 <mediaobject>
-				<videoobject> <videodata fileref="http://www.youtube.com/watch?v=bFMRcaSSkuI"></videodata> </videoobject>
-			</mediaobject>
 
 		</section>
 		

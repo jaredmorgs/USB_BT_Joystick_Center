@@ -175,12 +175,7 @@
       <para>Many applications on touchscreen devices use a virtual keyboard or virtual D-pad and buttons to control the game. Some games have no visible buttons, however there are regions on the screen that activate certain game features.</para>
       <para>To use these applications with &PRODUCT;, you need to install a free add-on  called &JOY2TOUCH;. </para>
       <para>The application can be obtained initially by tapping the <guibutton>J&gt;T</guibutton> slider, which prompts you to select an application to open the link with. If you select Google Play, you will be taken directly to the download page for &JOY2TOUCH;.</para>
-      <para>For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio&apos;s <citetitle>The Pinball Arcade</citetitle>, refer to this Green Robot Gamer  YouTube tutorial.</para>
-      <mediaobject>
-        <videoobject>
-          <videodata fileref="http://www.youtube.com/watch?v=bFMRcaSSkuI"/>
-        </videoobject>
-      </mediaobject>
+      <para>For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio&apos;s <citetitle>The Pinball Arcade</citetitle>, refer to this <ulink url="http://www.youtube.com/watch?v=bFMRcaSSkuI">Green Robot Gamer YouTube tutorial</ulink>. The Pinball Arcade uses touch screen regions to control flippers and other table-specific controls, and the tutorial is a good example of configuring on-screen controller support for other games.</para>
     </section>
     <section id="Keyboard_Mouse_Support">
       <title>Keyboard and Mouse Support</title>
