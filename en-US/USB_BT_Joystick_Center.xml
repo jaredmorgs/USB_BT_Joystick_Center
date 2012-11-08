@@ -95,7 +95,7 @@
   <chapter id="Connect_A_Controller">
     <title>Connect a Controller</title>
     <note>
-      <para>If you prefer to learn by watching rather than reading, take a look at the YouTube channel discussed in </para>
+      <para>If you prefer to learn by watching rather than reading, take a look at the YouTube channel discussed in <xref linkend="Introduction"/>.</para>
     </note>
     <procedure>
       <title>Configuring Input Methods</title>
@@ -134,7 +134,7 @@
         <para>Plug the cable into the device.</para>
       </step>
       <step>
-        <para>Tap SEARCH to detect the device.  </para>
+        <para>Tap <guibutton>SEARCH</guibutton> to detect the device.  </para>
       </step>
       <step>
         <para>The controller is detected, and it&apos;s name is  displayed as a button in the main screen.</para>
@@ -176,10 +176,13 @@
       <para>To use these applications with &PRODUCT;, you need to install a free add-on  called &JOY2TOUCH;. </para>
       <para>The application can be obtained initially by tapping the <guibutton>J&gt;T</guibutton> slider, which prompts you to select an application to open the link with. If you select Google Play, you will be taken directly to the download page for &JOY2TOUCH;.</para>
       <para>For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio&apos;s <citetitle>The Pinball Arcade</citetitle>, refer to this <ulink url="http://www.youtube.com/watch?v=bFMRcaSSkuI">Green Robot Gamer YouTube tutorial</ulink>. The Pinball Arcade uses touch screen regions to control flippers and other table-specific controls, and the tutorial is a good example of configuring on-screen controller support for other games.</para>
+      <para>For detailed instructions specific to &JOY2TOUCH;, refer to the &JOY2TOUCH; User Guide embedded into the application.</para>
     </section>
     <section id="Keyboard_Mouse_Support">
       <title>Keyboard and Mouse Support</title>
+      <para>Keyboard and Mouse support is similar to on-screen controller support. &JOY2TOUCH; is required to map touchscreen events triggered by the mouse to the buttons. The mouse movement must also be mapped as a &quot;finger touch&quot; event.</para>
       <para>Add the &quot;Mouse after pressing the &quot;Search&quot; Button not found (6.x)&quot; FAQ post here.</para>
+      <para>For detailed Keyboard and Mouse instructions specific to &JOY2TOUCH;, refer to the &JOY2TOUCH; User Guide embedded into the application.</para>
     </section>
   </chapter>
   <chapter id="FAQ_About_Phones_Tablets">
@@ -380,7 +383,7 @@
 &lt;/permissions&gt;</programlisting>
             </listitem>
             <listitem>
-              <para>Reboot device to activate.</para>
+              <para>Reboot device to load the configuration file, and activate USB Host Support.</para>
             </listitem>
           </orderedlist>
         </answer>
@@ -563,7 +566,7 @@
       <title>Keyboard and Mouse Questions</title>
       <qandaentry>
         <question>
-          <para>.</para>
+          <para>TODO - STAY TUNED!</para>
         </question>
         <answer>
           <para>. </para>
@@ -577,8 +580,9 @@
           <para>I am using Android ICS 4.0.x, and I can not make &PRODUCT; detect any USB Joysticks. How do I solve this?</para>
         </question>
         <answer>
-          <para>.Unfortunately ICS 4.0.1 and earlier does not have USB API support. If your device has USB Host support, but the manufacturer did not include USB &quot;API&quot; support,  you can not use USB Joysticks with the USB/BT Joystick Center. </para>
-          <para>Ask the manufacturer for an ICS 4.0.3 update with USB Host API support. Alternatively, try a custom ROM for your device, based on an operating system version higher than 4.0.1. Or use a Wii controller.</para>
+          <para>.Unfortunately ICS 4.0.1 and earlier does not have USB API support. If your device has USB <emphasis>Host</emphasis> support, but the manufacturer did not include USB <emphasis>API</emphasis> support,  you can not use USB Joysticks with the USB/BT Joystick Center. </para>
+          <para>Ask the manufacturer for an ICS 4.0.3 update with USB Host API support. Alternatively, try a custom ROM for your device, based on an operating system version higher than 4.0.1. </para>
+          <para>Alternatively use a  Wii  Classic Controller. This controller provides a large selection of buttons to map, and because the Wii controller is a &quot;pairless&quot; Bluetooth controller, it has excellent support with minimal Bluetooth stack issues.</para>
         </answer>
       </qandaentry>
       <qandaentry>
@@ -587,7 +591,7 @@
         </question>
         <answer>
           <para>Did you exit &PRODUCT; by tapping the <guibutton>Back</guibutton> button on your device? If you tapped the <guibutton>Home</guibutton> button, the &quot;Game Mode&quot; is not activated and the controller mappings will not work.</para>
-          <para>Have you correctly mapped the required keys for the emulator or game? If you accidentally mapped incorrect controller scheme to buttons on your controller, the emulator or game will not respond to the button press. Double-check your mapping.</para>
+          <para>Have you correctly mapped the required keys for the emulator or game? If you accidentally mapped an incorrect controller scheme to buttons on your controller, the emulator or game will not respond to the button press. Double-check your mapping.</para>
           <para>Did you tap the IME slider and set USBJoyIME as the imput method before starting the game?</para>
         </answer>
       </qandaentry>
