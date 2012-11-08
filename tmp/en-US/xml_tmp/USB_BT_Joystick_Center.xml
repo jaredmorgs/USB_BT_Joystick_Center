@@ -5,13 +5,13 @@
 ]>
 <book>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
-  <chapter>
+  <chapter id="Introduction">
     <title>Introduction</title>
-    <para>Thank you for downloading &PRODUCT;.</para>
-    <para>If you have not used the application before, read </para>
-    <para>If you are having issues with getting your Android device to work with the application, read     &lt; link to Known Issues post&gt; to check if your device is not compatible.</para>
-    <para>If you are having issues with getting your controller working with the application, read</para>
-    <para/>
+    <para>Thank you for downloading &PRODUCT;. Read this guide to learn how to get the most out of &PRODUCT; and &JOY2TOUCH;.</para>
+    <para>If this is your first time using either application, read <xref linkend="Quick_Start"/>, <xref linkend="Main_Screen"/> and <xref linkend="Connect_A_Controller"/> to familiarize yourself with the interface, and </para>
+    <para>For detailed video tutorials about  setting up controllers using &PRODUCT; and &JOY2TOUCH;, follow <ulink url="http://www.youtube.com/user/thepoke64738">poke64738&apos;s YouTube Channel</ulink>. If a tutorial for your device in not on this YouTube Channel, search YouTube for &quot;USB/BT Joystick Center 6&quot; and you should find what you are looking for.</para>
+    <para>If you are having issues with getting your Android device to work with the application, read <xref linkend="FAQ_About_Phones_Tablets"/>.</para>
+    <para>If you are having issues with getting your controller working, read <xref linkend="FAQ_About_Controllers"/>.</para>
   </chapter>
   <chapter id="Quick_Start">
     <title>Quick Start</title>
@@ -19,13 +19,13 @@
     <para>The basic work flow is:</para>
     <orderedlist>
       <listitem>
-        <para>Start &PRODUCT;</para>
+        <para>Start &PRODUCT;.</para>
       </listitem>
       <listitem>
         <para>Tap the IME slider to select USBJoyIME as the input method.</para>
       </listitem>
       <listitem>
-        <para>If this is the first time you have used &PRODUCT;, authorize it as a valid input method in the Android Settings.</para>
+        <para>If this is the first time you have used &PRODUCT;, authorize it as a valid input method in the Android Settings. </para>
       </listitem>
       <listitem>
         <para>Plug in the USB controller, or tap the BT slider to activate Bluetooth.</para>
@@ -34,18 +34,19 @@
         <para>If your controller is a Bluetooth controller, activate pairing mode on the controller.</para>
       </listitem>
       <listitem>
-        <para>Tap SEARCH in the Main Screen.</para>
+        <para>Tap <guibutton>SEARCH</guibutton> in the Main Screen.</para>
       </listitem>
       <listitem>
         <para>Once the controller is detected, tap the controller icon.</para>
       </listitem>
       <listitem>
-        <para>The controller is now the input device for the Android device.</para>
+        <para>The controller is now the input method for the Android device.</para>
         <para>You can now begin mapping buttons to game controls.</para>
       </listitem>
     </orderedlist>
+    <para>These instructions may be enough for some users to begin using a controller with the application. If you have difficulty connecting a controller or using it in-game, refer to <xref linkend="Connect_A_Controller"/> and <xref linkend="Map_Buttons"/> for further assistance.</para>
   </chapter>
-  <chapter>
+  <chapter id="Main_Screen">
     <title>Main Screen</title>
     <para>When you start the application for the first time, the main screen is displayed.</para>
     <mediaobject>
@@ -53,9 +54,49 @@
         <imagedata fileref="images/Main_Screen.png" format="PNG"/>
       </imageobject>
     </mediaobject>
+    <para>The following buttons and sliders are used to activate different modes in &PRODUCT;</para>
+    <variablelist>
+      <varlistentry>
+        <term>IME</term>
+        <listitem>
+          <para>Tap this slider to select USBJoyIME. This is the name for &PRODUCT; registered in the Android Input Select settings. If this slider is not set to On (yellow), you can not use joysticks, game pads, or keyboards with the game.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>BT</term>
+        <listitem>
+          <para>Tap this slider to activate Bluetooth within the application so you can pair controllers such as Wii remotes for use. If Bluetooth is not already activated on your device, tapping this slider will turn on Bluetooth, and activate the Bluetooth service in &PRODUCT;.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>A</term>
+        <listitem>
+          <para>Tap this slider to activate AnalogKey mode for MUPEN64Plus AE and FPSe emulators. If you are not using either of these emulators, then do not activate this slider.</para>
+          <note>
+            <para>Ensure you map the analog stick to the Analog-Key in the settings of these emulators. Once the stick is mapped correctly, you can control characters using the analog method, rather than the digital D-pad.</para>
+          </note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>J&gt;T</term>
+        <listitem>
+          <para>Tap this slider to activate the &JOY2TOUCH;. This application  allows touch screen events to be mapped to controller button presses, or keyboard and mouse actions. </para>
+          <para>For more information about &JOY2TOUCH;, refer to <xref linkend="On-screen_Controller_Support"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>SEARCH</term>
+        <listitem>
+          <para>Tap this button to begin searching for USB and Bluetooth controllers, which have been plugged into the device, or set to Bluetooth discover/pairing mode.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
   </chapter>
   <chapter id="Connect_A_Controller">
     <title>Connect a Controller</title>
+    <note>
+      <para>If you prefer to learn by watching rather than reading, take a look at the YouTube channel discussed in </para>
+    </note>
     <procedure>
       <title>Configuring Input Methods</title>
       <para>Before using &PRODUCT; to control an application for the first time, you need to authorize the application as a valid input method (IME).</para>
@@ -122,29 +163,35 @@
       <para>If you are having problems detecting the controller using Bluetooth, refer to the section that relates to your controller in <xref linkend="FAQ_About_Controllers"/> for help with troubleshooting.</para>
     </note>
   </chapter>
-  <chapter>
+  <chapter id="Map_Buttons">
     <title>Map buttons</title>
     <para>How you map buttons in &PRODUCT; depends on whether the game or application features support for physical controllers (instead of touch screen controls), or whether the game or application is touchscreen only (on-screen controllers).</para>
-    <section>
+    <section id="Physical_Controller_Support">
       <title>Physical Controller Support</title>
-      <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;.</para>
+      <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;. All you should need to do is map the physical controller keys on your joystick to the controller map present in the game.</para>
     </section>
-    <section>
+    <section id="On-screen_Controller_Support">
       <title>On-screen Controller Support</title>
       <para>Many applications on touchscreen devices use a virtual keyboard or virtual D-pad and buttons to control the game. Some games have no visible buttons, however there are regions on the screen that activate certain game features.</para>
       <para>To use these applications with &PRODUCT;, you need to install a free add-on  called &JOY2TOUCH;. </para>
       <para>The application can be obtained initially by tapping the <guibutton>J&gt;T</guibutton> slider, which prompts you to select an application to open the link with. If you select Google Play, you will be taken directly to the download page for &JOY2TOUCH;.</para>
+      <para>For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio&apos;s <citetitle>The Pinball Arcade</citetitle>, refer to this Green Robot Gamer  YouTube tutorial.</para>
+      <mediaobject>
+        <videoobject>
+          <videodata fileref="http://www.youtube.com/watch?v=bFMRcaSSkuI"/>
+        </videoobject>
+      </mediaobject>
     </section>
-    <section>
+    <section id="Keyboard_Mouse_Support">
       <title>Keyboard and Mouse Support</title>
       <para>Add the &quot;Mouse after pressing the &quot;Search&quot; Button not found (6.x)&quot; FAQ post here.</para>
     </section>
   </chapter>
-  <chapter>
+  <chapter id="FAQ_About_Phones_Tablets">
     <title>Frequently Asked Questions About Phones and Tablets</title>
     <qandaset>
       <title>Samsung Questions</title>
-<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>Why can&apos;t I use the Wii Controller with the Samsung Galaxy S 3 (SGS3), and other new model Samsung handsets. </para>
         </question>
@@ -174,7 +221,7 @@
     </qandaset>
     <qandaset>
       <title>Nexus Questions</title>
-<!--Taken from Nexus: No Touch-Mapping Mode and no Button response in game FAQ post.-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>No touch mapping mode in Joystick2Touch, and no response in game  </para>
         </question>
@@ -238,7 +285,7 @@
     </qandaset>
     <qandaset>
       <title>HTC Questions</title>
-<!--Taken from Bluetooth-Wii problems with newer Samsung/HTC devices FAQ post.-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>Why can&apos;t I use the Wii Controller with the HTC One X </para>
         </question>
@@ -267,7 +314,7 @@
           <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
         </answer>
       </qandaentry>
-<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->      <qandaentry>
+      <qandaentry>
         <question>
           <para>How do I solve the &quot;Memory Crash: Out of Memory&quot; error.</para>
         </question>
@@ -293,6 +340,56 @@
           </orderedlist>
         </answer>
       </qandaentry>
+      <qandaentry>
+        <question>
+          <para>How do I add USB Host API support to my device.   </para>
+        </question>
+        <answer>
+          <para>You will encounter an issue with missing Bluetooth drivers on some custom ROMs.</para>
+          <para>These instructions are generic. Your table must be rooted to complete these steps. </para>
+          <orderedlist>
+            <listitem>
+              <para>Install a custom ROM compatible with your device that includes support for the  USB Host API. Read the XDA Forum ROM page for clues to whether the ROM contains this component. </para>
+            </listitem>
+            <listitem>
+              <para>Download Root Browser from Google Play.</para>
+            </listitem>
+            <listitem>
+              <para>Navigate to the <filename>/system/etc/permission/</filename> directory.</para>
+            </listitem>
+            <listitem>
+              <para>Create a file named <filename>android.hardware.usb.host.xml</filename>.</para>
+            </listitem>
+            <listitem>
+              <para>Paste the following text into the file.</para>
+              <programlisting language="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--&gt;
+
+&lt;!-- This is the standard feature indicating that the device can communicate
+    with USB devices as the USB host. --&gt;
+&lt;permissions&gt;
+    &lt;feature name=&quot;android.hardware.usb.host&quot; /&gt;
+&lt;/permissions&gt;</programlisting>
+            </listitem>
+            <listitem>
+              <para>Reboot device to activate.</para>
+            </listitem>
+          </orderedlist>
+        </answer>
+      </qandaentry>
     </qandaset>
     <qandaset>
       <title>XPeria Play Questions</title>
@@ -313,7 +410,7 @@
           <para>You must also enable the <guibutton>J&gt;T</guibutton> slider for the touch pad to operate correctly.</para>
         </answer>
       </qandaentry>
-<!--Taken from Memory Crash: Out Of Memory [SOLVED]-->    </qandaset>
+    </qandaset>
   </chapter>
   <chapter id="FAQ_About_Controllers">
     <title>Frequently Asked Questions About Controllers</title>
@@ -383,7 +480,7 @@
           <para>I have an original PS3 Sixaxis controller made by Sony, but it can not be found by &PRODUCT;. What do I need to do to make it work?</para>
         </question>
         <answer>
-          <para>You can not use the standard Bluetooth stack in phones and tables with PS3 controllers because of the enhanced data rate they need to send signals. You need to use a USB Bluetooth CSR &quot;2.x/EDR+&quot; Dongle so the PS3 controller has the correct Enhanced Data Rate tunnel. An example of such a dongle is <ulink url="http://dx.com/p/ultra-mini-bluetooth-2-1-edr-usb-2-0-dongle-37665"/></para>
+          <para>You can not use the standard Bluetooth stack in phones and tables with PS3 controllers because of the enhanced data rate they need to send signals. You need to use a USB Bluetooth Cambridge Silicon Radio (CSR) &quot;2.x/EDR+&quot; Dongle so the PS3 controller has the correct Enhanced Data Rate tunnel. An example of such a dongle is <ulink url="http://dx.com/p/ultra-mini-bluetooth-2-1-edr-usb-2-0-dongle-37665"/></para>
           <orderedlist>
             <listitem>
               <para>Plug in the USB Dongle. </para>
