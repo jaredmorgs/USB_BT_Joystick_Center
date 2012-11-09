@@ -7,15 +7,16 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
   <chapter id="Introduction">
     <title>Introduction</title>
-    <para>Thank you for downloading &PRODUCT;. Read this guide to learn how to get the most out of &PRODUCT; and &JOY2TOUCH;.</para>
-    <para>If this is your first time using either application, read <xref linkend="Quick_Start"/>, <xref linkend="Main_Screen"/> and <xref linkend="Connect_A_Controller"/> to familiarize yourself with the interface, and </para>
-    <para>For detailed video tutorials about  setting up controllers using &PRODUCT; and &JOY2TOUCH;, follow <ulink url="http://www.youtube.com/user/thepoke64738">poke64738&apos;s YouTube Channel</ulink>. If a tutorial for your device in not on this YouTube Channel, search YouTube for &quot;USB/BT Joystick Center 6&quot; and you should find what you are looking for.</para>
+    <para>Thank you for purchasing &PRODUCT;. Your support is greatly appreciated. </para>
+    <para>If this is your first time using the  application, read <xref linkend="Quick_Start"/>, <xref linkend="Main_Screen"/> and <xref linkend="Connect_A_Controller"/> to familiarize yourself with the interface, and learn how to configure the application to work with your emulator or game.</para>
+    <para>If you need help with configuring a touchscreen game to work with a joystick, keyboard or mouse, read up to <xref linkend="On-screen_Controller_Support"/> and then refer to the  &JOY2TOUCH; user guide.</para>
+    <para>For detailed video tutorials about  setting up controllers using &PRODUCT; and &JOY2TOUCH;, follow <ulink url="http://www.youtube.com/user/thepoke64738">poke64738&apos;s YouTube Channel</ulink>. If a tutorial for your device in not on this YouTube Channel, search YouTube for &quot;USB/BT Joystick Center 6 and <replaceable>[name of joystick]</replaceable>&quot; and you should find what you are looking for.</para>
     <para>If you are having issues with getting your Android device to work with the application, read <xref linkend="FAQ_About_Phones_Tablets"/>.</para>
     <para>If you are having issues with getting your controller working, read <xref linkend="FAQ_About_Controllers"/>.</para>
   </chapter>
   <chapter id="Quick_Start">
     <title>Quick Start</title>
-    <para>Using &PRODUCT; to play Android games on your phone or tablet is designed to be as easy as possible.</para>
+    <para>Using &PRODUCT; to play  games on your phone or tablet is designed to be as easy as possible.</para>
     <para>The basic work flow is:</para>
     <orderedlist>
       <listitem>
@@ -28,13 +29,16 @@
         <para>If this is the first time you have used &PRODUCT;, authorize it as a valid input method in the Android Settings. </para>
       </listitem>
       <listitem>
-        <para>Plug in the USB controller, or tap the BT slider to activate Bluetooth.</para>
+        <para>Plug in a USB joystick or keyboard/mouse, or tap the BT slider to activate Bluetooth.</para>
       </listitem>
       <listitem>
-        <para>If your controller is a Bluetooth controller, activate pairing mode on the controller.</para>
+        <para>If your controller is a Bluetooth controller, activate pairing mode on the controller. </para>
+        <note>
+          <para>If your controller is not a pairless Bluetooth device (for example, iCade), detect and pair the controller using the Bluetooth settings on your device.</para>
+        </note>
       </listitem>
       <listitem>
-        <para>Tap <guibutton>SEARCH</guibutton> in the Main Screen.</para>
+        <para>Tap <guibutton>SEARCH</guibutton> in the Main Screen if the controller is not already detected.</para>
       </listitem>
       <listitem>
         <para>Once the controller is detected, tap the controller icon.</para>
@@ -42,6 +46,13 @@
       <listitem>
         <para>The controller is now the input method for the Android device.</para>
         <para>You can now begin mapping buttons to game controls.</para>
+      </listitem>
+      <listitem>
+        <para>To conserve battery power, do not leave  &PRODUCT; running between gaming sessions. Always turn off the application  by tapping the <guibutton>IME</guibutton> slider and selecting the preferred virtual keyboard on your device.</para>
+        <note>
+          <para>Tapping the IME slider will automatically shut down &JOY2TOUCH;, and close the application. </para>
+          <para>If Bluetooth is activated, this service will not be turned off by closing the application. Tap the <guibutton>BT</guibutton> slider to manually turn off Bluetooth before tapping the <guibutton>IME</guibutton> slider.</para>
+        </note>
       </listitem>
     </orderedlist>
     <para>These instructions may be enough for some users to begin using a controller with the application. If you have difficulty connecting a controller or using it in-game, refer to <xref linkend="Connect_A_Controller"/> and <xref linkend="Map_Buttons"/> for further assistance.</para>
@@ -166,14 +177,106 @@
   <chapter id="Map_Buttons">
     <title>Map buttons</title>
     <para>How you map buttons in &PRODUCT; depends on whether the game or application features support for physical controllers (instead of touch screen controls), or whether the game or application is touchscreen only (on-screen controllers).</para>
+    <section>
+      <title>Save Time: Import and Export Controller Maps</title>
+      <para>&PRODUCT; allows one controller map to be loaded for each detected controller type. So what happens when you want to play different games with different button maps on your device with the same controller? </para>
+      <para>Importing and Exporting maps is the key to using &PRODUCT; with multiple games. </para>
+      <para>Before you invest the time in creating a custom map, explore the pre-configured controller maps  in the <filename>/sdcard/USBJoyData</filename> folder of your Android device. Import these files into the application by following <xref linkend="proc-Import_Shipped_Controller_Maps"/>.</para>
+      <para>Search the internet for sites that offer pre-configured controller maps compatible with your game, and import these by following <xref linkend="proc-Import_Shared_Controller_Maps"/>.</para>
+      <para>Once you have configured the  controller map to your liking, consider sharing back to the community so others can benefit from your effort by following <xref linkend="proc-Export_Controller_Maps"/>.</para>
+      <procedure id="proc-Import_Shipped_Controller_Maps">
+        <title>Import Shipped Controller Maps</title>
+        <step>
+          <para>Connect a controller by following the steps in <xref linkend="Connect_A_Controller"/>.</para>
+        </step>
+        <step>
+          <para>Once the controller is detected, tap the controller tile on the main screen.</para>
+        </step>
+        <step>
+          <para>Tap the <guibutton>IMP</guibutton> button to display a list of available controller maps.  </para>
+        </step>
+        <step>
+          <para>Tap the controller map tile you want to load.</para>
+          <para>The current controller map is overwritten with the data from the imported controller map.</para>
+        </step>
+      </procedure>
+      <procedure id="proc-Import_Shared_Controller_Maps">
+        <title>Import Shared Controller Maps</title>
+        <step>
+          <para>Save the  &PRODUCT; controller map XML file obtained from a friend to <filename>/sdcard/USBJoyData</filename>.</para>
+        </step>
+        <step>
+          <para>Connect a controller by following the steps in <xref linkend="Connect_A_Controller"/>.</para>
+        </step>
+        <step>
+          <para>Once the controller is detected, tap the controller tile on the main screen.</para>
+        </step>
+        <step>
+          <para>Tap the <guibutton>IMP</guibutton> button to display a list of available controller maps.  </para>
+        </step>
+        <step>
+          <para>Tap the controller map tile you want to load.</para>
+          <para>The current controller map is overwritten with the data from the imported controller map.</para>
+        </step>
+      </procedure>
+      <procedure id="proc-Export_Controller_Maps">
+        <title>Export Controller Maps</title>
+        <step>
+          <para>Connect a controller by following the steps in <xref linkend="Connect_A_Controller"/>.</para>
+        </step>
+        <step>
+          <para>Once the controller is detected, tap the controller tile on the main screen.</para>
+        </step>
+        <step>
+          <para>Tap the <guibutton>EXP</guibutton> button to specify  a name and location to save the file. The default, and recommended, location is <filename>/sdcard/USBJoyData</filename>.</para>
+        </step>
+        <step>
+          <para>To ensure the exported controller map is displayed when you next import, prefix the filename with the controller type. </para>
+          <para>For example <filename>Wii-[controller-type]-[game_name].xml</filename></para>
+        </step>
+        <step>
+          <para/>
+          <para>Tap <guibutton>OK</guibutton> to export the controller map to the specified location.</para>
+        </step>
+      </procedure>
+    </section>
     <section id="Physical_Controller_Support">
       <title>Physical Controller Support</title>
-      <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;. All you should need to do is map the physical controller keys on your joystick to the controller map present in the game.</para>
+      <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;. All you should need to do is map the physical controller keys to the virtual keys on your joystick.</para>
+      <para>If you load a pre-configured map file, most of the primary buttons should be mapped for you. If some buttons are not mapped to your liking, follow </para>
+      <procedure id="proc-Mapping_Physical_Controller_Keys">
+        <title>Mapping and Testing Physical Controller Keys</title>
+        <step>
+          <para>Connect a controller by following the steps in <xref linkend="Connect_A_Controller"/>.</para>
+        </step>
+        <step>
+          <para>Once the controller is detected, tap the controller tile on the main screen.</para>
+        </step>
+        <step>
+          <para>To check how a key is mapped, press and hold the key on the controller.</para>
+          <para>The pressed key is displayed  in the key map. </para>
+        </step>
+        <step>
+          <para>If the mapping is not correct, tap the virtual key on the screen, then press a different   controller button to assign that button to the virtual key.</para>
+        </step>
+        <step>
+          <para>Once you are happy with the new button layout, tap the Back button (not <guibutton>Home</guibutton> button) on your device to enable Game Mode.</para>
+        </step>
+        <step>
+          <para>Start the game, and configure the keyboard input in the game settings.</para>
+        </step>
+        <step>
+          <para>Play the game, and test that the controller map works correctly.</para>
+        </step>
+        <step>
+          <para>Export the controller map by following <xref linkend="proc-Export_Controller_Maps"/> to ensure you do not lose the configuration when playing another game.</para>
+        </step>
+      </procedure>
     </section>
     <section id="On-screen_Controller_Support">
       <title>On-screen Controller Support</title>
       <para>Many applications on touchscreen devices use a virtual keyboard or virtual D-pad and buttons to control the game. Some games have no visible buttons, however there are regions on the screen that activate certain game features.</para>
-      <para>To use these applications with &PRODUCT;, you need to install a free add-on  called &JOY2TOUCH;. </para>
+      <para>To use these applications with &PRODUCT;, you need to install  &JOY2TOUCH;. </para>
       <para>The application can be obtained initially by tapping the <guibutton>J&gt;T</guibutton> slider, which prompts you to select an application to open the link with. If you select Google Play, you will be taken directly to the download page for &JOY2TOUCH;.</para>
       <para>For an excellent demonstration of &JOY2TOUCH; working with Farsight Studio&apos;s <citetitle>The Pinball Arcade</citetitle>, refer to this <ulink url="http://www.youtube.com/watch?v=bFMRcaSSkuI">Green Robot Gamer YouTube tutorial</ulink>. The Pinball Arcade uses touch screen regions to control flippers and other table-specific controls, and the tutorial is a good example of configuring on-screen controller support for other games.</para>
       <para>For detailed instructions specific to &JOY2TOUCH;, refer to the &JOY2TOUCH; User Guide embedded into the application.</para>
@@ -181,186 +284,70 @@
     <section id="Keyboard_Mouse_Support">
       <title>Keyboard and Mouse Support</title>
       <para>Keyboard and Mouse support is similar to on-screen controller support. &JOY2TOUCH; is required to map touchscreen events triggered by the mouse to the buttons. The mouse movement must also be mapped as a &quot;finger touch&quot; event.</para>
-      <para>Add the &quot;Mouse after pressing the &quot;Search&quot; Button not found (6.x)&quot; FAQ post here.</para>
       <para>For detailed Keyboard and Mouse instructions specific to &JOY2TOUCH;, refer to the &JOY2TOUCH; User Guide embedded into the application.</para>
     </section>
   </chapter>
   <chapter id="FAQ_About_Phones_Tablets">
     <title>Frequently Asked Questions About Phones and Tablets</title>
-    <qandaset>
-      <title>Samsung Questions</title>
-      <qandaentry>
-        <question>
-          <para>Why can&apos;t I use the Wii Controller with the Samsung Galaxy S 3 (SGS3), and other new model Samsung handsets. </para>
-        </question>
-        <answer>
-          <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
-          <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
-          <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>What controllers can I use for sure  with the Samsung Galaxy S 3 (SGS3) </para>
-        </question>
-        <answer>
-          <para>The  iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing..</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>I can not get my Samsung device to recognize my USB controller.</para>
-        </question>
-        <answer>
-          <para>If you want to use USB devices with your Galaxy Tab or other Samsung devices,  you have to use the OTG Connection Kit. For example, <ulink url="http://www.ebay.com/sch/i.html?_nkw=usb+adapter+connection+kit+samsung&amp;clk_rvr_id=407743970573"/>.</para>
-          <para>Understand that Samsung devices and USB controllers are unreliable because support for USB OTG support varies between ROMs. If in doubt, test the controller using the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=20dfde5516e26fd4829b4b35f29b0454">USB Test App</ulink>.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>Nexus Questions</title>
-      <qandaentry>
-        <question>
-          <para>No touch mapping mode in Joystick2Touch, and no response in game  </para>
-        </question>
-        <answer>
-          <para>To fix this issue, you need to touch the Joystick2Touch icon in the task list once you are in the game you want to play. Don&apos;t ask me why. This is a peculiarity of this device.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>Telcast P76TI Tablet Questions</title>
-      <qandaentry>
-        <question>
-          <para>How do I add USB Host API support to my device.   </para>
-        </question>
-        <answer>
-          <para>You will encounter an issue with missing Bluetooth drivers on some custom ROMs.</para>
-          <para>These instructions may apply to other devices, however your results may vary. Your table must be rooted to complete these steps. </para>
-          <orderedlist>
-            <listitem>
-              <para>Install this ROM: <ulink url="http://forum.xda-developers.com/showthread.php?t=1499124"/> (current as of 17th April 2012)</para>
-            </listitem>
-            <listitem>
-              <para>Download Root Browser from Google Play.</para>
-            </listitem>
-            <listitem>
-              <para>Navigate to the <filename>/system/etc/permission/</filename> directory.</para>
-            </listitem>
-            <listitem>
-              <para>Create a file named <filename>android.hardware.usb.host.xml</filename>.</para>
-            </listitem>
-            <listitem>
-              <para>Paste the following text into the file.</para>
-              <programlisting language="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!-- Copyright (C) 2011 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
---&gt;
-
-&lt;!-- This is the standard feature indicating that the device can communicate
-    with USB devices as the USB host. --&gt;
-&lt;permissions&gt;
-    &lt;feature name=&quot;android.hardware.usb.host&quot; /&gt;
-&lt;/permissions&gt;</programlisting>
-            </listitem>
-            <listitem>
-              <para>Reboot device to activate </para>
-            </listitem>
-          </orderedlist>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>HTC Questions</title>
-      <qandaentry>
-        <question>
-          <para>Why can&apos;t I use the Wii Controller with the HTC One X </para>
-        </question>
-        <answer>
-          <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
-          <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
-          <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>What controllers can I use for sure  with the HTC One X </para>
-        </question>
-        <answer>
-          <para>The  iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing..</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
+    <section>
       <title>General Questions</title>
-      <qandaentry>
-        <question>
-          <para>How can I test whether &PRODUCT; will work on my device.</para>
-        </question>
-        <answer>
-          <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>How do I solve the &quot;Memory Crash: Out of Memory&quot; error.</para>
-        </question>
-        <answer>
-          <para> This is caused by an issue in a system file used by &PRODUCT;. This affects Samsung handsets mostly, however other handsets may be affected.</para>
-          <para/>
-          <orderedlist>
-            <listitem>
-              <para>Your device needs to be rooted.</para>
-            </listitem>
-            <listitem>
-              <para>Using the Root Explorer application (download from Google Play), navigate to the <filename>/system/data/app</filename> folder.</para>
-            </listitem>
-            <listitem>
-              <para>Locate the file named similar to <filename>com.poke64738.usbjoy-1.odex</filename>. The important info in the file you need to locate are  the words &quot;usbjoy&quot; and &quot;odex&quot;.</para>
-            </listitem>
-            <listitem>
-              <para>Delete this file.</para>
-            </listitem>
-            <listitem>
-              <para>Reinstall &PRODUCT; from Google Play.</para>
-            </listitem>
-          </orderedlist>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>How do I add USB Host API support to my device.   </para>
-        </question>
-        <answer>
-          <para>You will encounter an issue with missing Bluetooth drivers on some custom ROMs.</para>
-          <para>These instructions are generic. Your table must be rooted to complete these steps. </para>
-          <orderedlist>
-            <listitem>
-              <para>Install a custom ROM compatible with your device that includes support for the  USB Host API. Read the XDA Forum ROM page for clues to whether the ROM contains this component. </para>
-            </listitem>
-            <listitem>
-              <para>Download Root Browser from Google Play.</para>
-            </listitem>
-            <listitem>
-              <para>Navigate to the <filename>/system/etc/permission/</filename> directory.</para>
-            </listitem>
-            <listitem>
-              <para>Create a file named <filename>android.hardware.usb.host.xml</filename>.</para>
-            </listitem>
-            <listitem>
-              <para>Paste the following text into the file.</para>
-              <programlisting language="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>How can I test whether &PRODUCT; will work on my device.</para>
+          </question>
+          <answer>
+            <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>How do I solve the &quot;Memory Crash: Out of Memory&quot; error.</para>
+          </question>
+          <answer>
+            <para> This is caused by an issue in a system file used by &PRODUCT;. This affects Samsung handsets mostly, however other handsets may be affected.</para>
+            <para/>
+            <orderedlist>
+              <listitem>
+                <para>Your device needs to be rooted.</para>
+              </listitem>
+              <listitem>
+                <para>Using the Root Explorer application (download from Google Play), navigate to the <filename>/system/data/app</filename> folder.</para>
+              </listitem>
+              <listitem>
+                <para>Locate the file named similar to <filename>com.poke64738.usbjoy-1.odex</filename>. The important info in the file you need to locate are  the words &quot;usbjoy&quot; and &quot;odex&quot;.</para>
+              </listitem>
+              <listitem>
+                <para>Delete this file.</para>
+              </listitem>
+              <listitem>
+                <para>Reinstall &PRODUCT; from Google Play.</para>
+              </listitem>
+            </orderedlist>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>How do I add USB Host API support to my device.   </para>
+          </question>
+          <answer>
+            <para>These instructions are generic. Your Android device must be rooted to complete these steps. </para>
+            <orderedlist>
+              <listitem>
+                <para>Install a custom ROM compatible with your device that includes support for the  USB Host API. Read the XDA Forum ROM page for clues to whether the ROM contains this component. </para>
+              </listitem>
+              <listitem>
+                <para>Download Root Browser from Google Play.</para>
+              </listitem>
+              <listitem>
+                <para>Navigate to the <filename>/system/etc/permission/</filename> directory.</para>
+              </listitem>
+              <listitem>
+                <para>Create a file named <filename>android.hardware.usb.host.xml</filename>.</para>
+              </listitem>
+              <listitem>
+                <para>Paste the following text into the file.</para>
+                <programlisting language="XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;!-- Copyright (C) 2011 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -381,229 +368,300 @@
 &lt;permissions&gt;
     &lt;feature name=&quot;android.hardware.usb.host&quot; /&gt;
 &lt;/permissions&gt;</programlisting>
-            </listitem>
-            <listitem>
-              <para>Reboot device to load the configuration file, and activate USB Host Support.</para>
-            </listitem>
-          </orderedlist>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
+              </listitem>
+              <listitem>
+                <para>Reboot device to load the configuration file, and activate USB Host Support.</para>
+              </listitem>
+            </orderedlist>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>HTC Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>Why can&apos;t I use the Wii Controller with the HTC One X </para>
+          </question>
+          <answer>
+            <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
+            <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
+            <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>What controllers can I use for sure  with the HTC One X </para>
+          </question>
+          <answer>
+            <para>The  iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing..</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>Nexus Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>I have no touch mapping test  mode in Joystick2Touch, and there is  no response in-game  </para>
+          </question>
+          <answer>
+            <para>To fix this issue, you need to touch the Joystick2Touch icon in the task list once you are in the game you want to play. This is a peculiarity of this device.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>Samsung Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>Why can&apos;t I use the Wii Controller with the Samsung Galaxy S 3 (SGS3), and other new model Samsung handsets. </para>
+          </question>
+          <answer>
+            <para> This is unfortunately a known hardware issue with newer Samsung and HTC devices.</para>
+            <para> These devices do not include the full Bluetooth protocol stack, therefore &PRODUCT; is unable to pair the Wii Controller using &quot;pairless&quot; mode (where you do not need to supply the pairing pin).</para>
+            <para>The only way to use Bluetooth controllers on these affected handsets is to install a custom ROM, such as CyanogenMod, or choose a controller that is known to work with &PRODUCT;.</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>What controllers can I use for sure  with the Samsung Galaxy S 3 (SGS3) </para>
+          </question>
+          <answer>
+            <para>The  iControlpad and PhoneJoy are working correctly for stock ROM users. You must Bluetooth pair these devices before starting &PRODUCT;. The pairing pin for both controllers is 1234 at time of writing.</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>I can not get my Samsung device to recognize my USB controller.</para>
+          </question>
+          <answer>
+            <para>If you want to use USB devices with your Galaxy Tab or other Samsung devices,  you have to use the OTG Connection Kit. For example, <ulink url="http://www.ebay.com/sch/i.html?_nkw=usb+adapter+connection+kit+samsung&amp;clk_rvr_id=407743970573"/>.</para>
+            <para>Understand that Samsung devices and USB controllers are unreliable because support for USB OTG support varies between ROMs. If in doubt, test the controller using the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=20dfde5516e26fd4829b4b35f29b0454">USB Test App</ulink>.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
       <title>XPeria Play Questions</title>
-      <qandaentry>
-        <question>
-          <para>I&apos;m looking for a quick tutorial on how to set up &PRODUCT; on the XPeria Play. What is a recommended tutorial?</para>
-        </question>
-        <answer>
-          <para>Visit <ulink url="http://www.xperiagamer.com/PLAY-Apps-Tweaks/usb-bt-joystick-center-6.html"/> for an excellent tutorial. </para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>Why is the analog touchpad not working?</para>
-        </question>
-        <answer>
-          <para>A function of the XPeria Play is to lock the touch pad if the device is booted with the slider in the open position. To fix the issue, close the slider, and restart the device. &PRODUCT; should behave as expected. </para>
-          <para>You must also enable the <guibutton>J&gt;T</guibutton> slider for the touch pad to operate correctly.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>I&apos;m looking for a quick tutorial on how to set up &PRODUCT; on the XPeria Play. What is a recommended tutorial?</para>
+          </question>
+          <answer>
+            <para>Visit <ulink url="http://www.xperiagamer.com/PLAY-Apps-Tweaks/usb-bt-joystick-center-6.html"/> for an excellent tutorial. </para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>Why is the analog touch pad not working?</para>
+          </question>
+          <answer>
+            <para>A function of the XPeria Play is to lock the touch pad if the device is booted with the slider in the open position. To fix the issue, close the slider, and restart the device. &PRODUCT; should behave as expected. </para>
+            <para>You must also enable the <guibutton>J&gt;T</guibutton> slider for the touch pad to operate correctly.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
   </chapter>
   <chapter id="FAQ_About_Controllers">
     <title>Frequently Asked Questions About Controllers</title>
-    <qandaset>
-      <title>PhoneJoy Questions</title>
-      <qandaentry>
-        <question>
-          <para>Where are some tutorials for setting up this controller? </para>
-        </question>
-        <answer>
-          <para>The official website has a screen-by-screen tutorial. View it at <ulink url="http://www.phonejoy.us/support/getting-started/android/usbbt-joystick-center/"/> .</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>Why are the analog pads not working on the PhoneJoy controller? </para>
-        </question>
-        <answer>
-          <para>You must enable the analog pads on the controller first, by pressing the &quot;Analog&quot; button on the PhoneJoy joystick. You have activated Analog mode successfully when the LED indicator is lit.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>Wiimote Questions</title>
-      <qandaentry>
-        <question>
-          <para> Where are some tutorials for setting up this controller?</para>
-        </question>
-        <answer>
-          <para>The <ulink url="http://wiki.greenrobotgamer.com/techsupport/usingusbjoy.php">Green Robot Gamer</ulink> has a page dedicated to &PRODUCT; and &JOY2TOUCH;, including preset controller maps for popular games and controllers. The controller maps are compatible with the Nintendo Wii Controller and the additional Nintendo Wii  Classic Controller.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>XBox360 Questions</title>
-      <qandaentry>
-        <question>
-          <para>When I try to pair an XBox360 wireless receiver to my device, nothing happens when I tap SEARCH. How can I fix this?</para>
-        </question>
-        <answer>
-          <para> You need to ensure you first pair the X360 Wireless Joystick with the X360 Wireless Receiver.</para>
-          <para>Once you have done that, tap the <guibutton>SEARCH</guibutton> button and move the analog stick of the X360 Wireless Joystick so the wireless receiver detects the controller is &quot;on&quot;.</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>I have a X360 Wireless Joystick, but I can not pair it with my device. How can I fix this?</para>
-        </question>
-        <answer>
-          <para>X360 controllers, like PS3 Sixaxis controllers, do not work with standard Android Bluetooth stacks, and require a special dongle to work. Purchase the Microsoft USB Wireless Gaming Adapter. </para>
-          <para>Ensure you first pair the wireless controller with the USB Wireless Gaming Adapter before attempting to pair the controller with &PRODUCT;.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>PS3 Sixaxis Questions</title>
-      <qandaentry>
-        <question>
-          <para>I have a &quot;third party&quot; PS3 Sixaxis controller, but it isn&apos;t being detected by  &PRODUCT;. Why?</para>
-        </question>
-        <answer>
-          <para>Third-party PS3 controllers do not work with &PRODUCT;. You must use an original PS3 controller from Sony. </para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>I have an original PS3 Sixaxis controller made by Sony, but it can not be found by &PRODUCT;. What do I need to do to make it work?</para>
-        </question>
-        <answer>
-          <para>You can not use the standard Bluetooth stack in phones and tables with PS3 controllers because of the enhanced data rate they need to send signals. You need to use a USB Bluetooth Cambridge Silicon Radio (CSR) &quot;2.x/EDR+&quot; Dongle so the PS3 controller has the correct Enhanced Data Rate tunnel. An example of such a dongle is <ulink url="http://dx.com/p/ultra-mini-bluetooth-2-1-edr-usb-2-0-dongle-37665"/></para>
-          <orderedlist>
-            <listitem>
-              <para>Plug in the USB Dongle. </para>
-            </listitem>
-            <listitem>
-              <para>Press the <guibutton>SEARCH</guibutton> button in  &PRODUCT;. The Bluetooth MAC address is stored. </para>
-            </listitem>
-            <listitem>
-              <para>If you are using a USB hub, plug in the PS3 Controller using a USB cable. Otherwise unplug the USB dongle and plug in the PS3 Controller.</para>
-            </listitem>
-            <listitem>
-              <para>Tap <guibutton>SEARCH</guibutton> again to detect the PS3 Controller. The joystick button appears in the main screen.</para>
-            </listitem>
-            <listitem>
-              <para>Tap the <guibutton>P</guibutton> button on the PS3 Joystick button to pair the PS3 Joystick to the USB Dongle MAC address.</para>
-            </listitem>
-            <listitem>
-              <para>Unplug the PS3 Joystick from the USB hub or device. Ensure the USB Dongle is plugged back into the device.</para>
-            </listitem>
-            <listitem>
-              <para>Tap <guibutton>SEARCH</guibutton> again. </para>
-              <para>When the text &quot;Searching for PS3&quot; displays, press the PS button on the PS3 Controller to activate Bluetooth pairing. </para>
-            </listitem>
-          </orderedlist>
-          <para>The controller should now be paired as a USB joystick.</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>So I have followed the instructions above to pair the PS3 controller using a Bluetooth dongle, but it doesn&apos;t work.</para>
-        </question>
-        <answer>
-          <para>Have you tried disconnecting and reconnecting the dongle, and trying to search again?</para>
-          <para>If that fails, you may need to hard reset your PS3 controller using a pin or paper clip to press the reset switch. Once you have reset the controller, repeat the pairing process again.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>iCade Questions</title>
-      <qandaentry>
-        <question>
-          <para>Where are some tutorials for setting up this controller for MAME </para>
-        </question>
-        <answer>
-          <para>The <ulink url="http://wiki.greenrobotgamer.com/techsupport/usingusbjoy.php">Green Robot Gamer</ulink> has a page dedicated to &PRODUCT; and &JOY2TOUCH;, including preset controller maps for popular games and controllers. The controller maps for iCade are compatible with most basic MAME emulated games.</para>
-        </answer>
-        <answer>
-          <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/26454250nx52440/faqs-usb-bt-joystick-center-f20/download-usb-bt-joystick-center-testapp-t136.html?sid=ba4c346172b901fe7a589fa4b1375e85"> USB/BT Joystick Center Test App</ulink> </para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>iControlPad Questions</title>
-      <qandaentry>
-        <question>
-          <para>I can not connect the ICP to my device</para>
-        </question>
-        <answer>
-          <orderedlist>
-            <listitem>
-              <para>Correctly pair the ICP using the Bluetooth settings of your device.</para>
-            </listitem>
-            <listitem>
-              <para>On the ICP, press <keycombo>
-                  <keycap>Y</keycap>
-                  <keycap>START</keycap>
-                </keycombo> to activate the SPP mode.</para>
-            </listitem>
-            <listitem>
-              <para>Press SEARCH in the &PRODUCT; main screen to detect the controller.</para>
-            </listitem>
-          </orderedlist>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>Sometimes the button mapping is wrong.</para>
-        </question>
-        <answer>
-          <para>.THis is caused by the ICP occasionally sending an incorrect first byte in the data stream. To correct the issue, disconnect (unpair) the ICP and reconnect. This issue will hopefully be reduced by iControl code optimization implemented in v6.0 of &PRODUCT;.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
-      <title>Keyboard and Mouse Questions</title>
-      <qandaentry>
-        <question>
-          <para>TODO - STAY TUNED!</para>
-        </question>
-        <answer>
-          <para>. </para>
-        </answer>
-      </qandaentry>
-    </qandaset>
-    <qandaset>
+    <section>
       <title>General Controller Questions</title>
-      <qandaentry>
-        <question>
-          <para>I am using Android ICS 4.0.x, and I can not make &PRODUCT; detect any USB Joysticks. How do I solve this?</para>
-        </question>
-        <answer>
-          <para>.Unfortunately ICS 4.0.1 and earlier does not have USB API support. If your device has USB <emphasis>Host</emphasis> support, but the manufacturer did not include USB <emphasis>API</emphasis> support,  you can not use USB Joysticks with the USB/BT Joystick Center. </para>
-          <para>Ask the manufacturer for an ICS 4.0.3 update with USB Host API support. Alternatively, try a custom ROM for your device, based on an operating system version higher than 4.0.1. </para>
-          <para>Alternatively use a  Wii  Classic Controller. This controller provides a large selection of buttons to map, and because the Wii controller is a &quot;pairless&quot; Bluetooth controller, it has excellent support with minimal Bluetooth stack issues.</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>After exiting out of  &PRODUCT;, none of the in-game controls work. How do I troubleshoot this?</para>
-        </question>
-        <answer>
-          <para>Did you exit &PRODUCT; by tapping the <guibutton>Back</guibutton> button on your device? If you tapped the <guibutton>Home</guibutton> button, the &quot;Game Mode&quot; is not activated and the controller mappings will not work.</para>
-          <para>Have you correctly mapped the required keys for the emulator or game? If you accidentally mapped an incorrect controller scheme to buttons on your controller, the emulator or game will not respond to the button press. Double-check your mapping.</para>
-          <para>Did you tap the IME slider and set USBJoyIME as the imput method before starting the game?</para>
-        </answer>
-      </qandaentry>
-      <qandaentry>
-        <question>
-          <para>I am running a game emulator but none of my mapped keys are working. What do I do to fix this?</para>
-        </question>
-        <answer>
-          <para>Most emulators have IME Support switched off by default. Activate this option in the emulator keyboard settings,  and try again.</para>
-        </answer>
-      </qandaentry>
-    </qandaset>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>I am using a version of Android below ICS 4.0.2, and I can not make &PRODUCT; detect any USB Joysticks. How do I solve this?</para>
+          </question>
+          <answer>
+            <para>.Unfortunately ICS 4.0.1 and earlier does not have USB API support. If your device has USB <emphasis>Host</emphasis> support, but the manufacturer did not include USB <emphasis>API</emphasis> support,  you can not use USB Joysticks with the USB/BT Joystick Center. </para>
+            <para>Ask the manufacturer for an ICS 4.0.3 update with USB Host API support. Alternatively, try a custom ROM for your device, based on an operating system version higher than 4.0.1. </para>
+            <para>Alternatively use a  Wii  Classic Controller. This controller provides a large selection of buttons to map, and because the Wii controller is a &quot;pairless&quot; Bluetooth controller, it has excellent support with minimal Bluetooth stack issues on most devices.</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>After exiting out of  &PRODUCT;, none of the in-game controls work. How do I troubleshoot this?</para>
+          </question>
+          <answer>
+            <para>Did you exit &PRODUCT; by tapping the <guibutton>Back</guibutton> button on your device? If you tapped the <guibutton>Home</guibutton> button, the &quot;Game Mode&quot; is not activated and the controller mappings will not work.</para>
+            <para>Have you correctly mapped the required keys for the emulator or game? If you accidentally mapped an incorrect controller scheme to buttons on your controller, the emulator or game will not respond to the button press. Double-check your mapping.</para>
+            <para>Did you tap the <guibutton>IME</guibutton> slider and set USBJoyIME as the input method before starting the game?</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>I am running a game emulator but none of my mapped keys are working. What can I do to fix this?</para>
+          </question>
+          <answer>
+            <para>Most emulators have IME Support switched off by default. Activate this option in the emulator keyboard settings,  and try again.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>iCade Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>Where are some tutorials for setting up this controller for MAME </para>
+          </question>
+          <answer>
+            <para>The <ulink url="http://wiki.greenrobotgamer.com/techsupport/usingusbjoy.php">Green Robot Gamer</ulink> has a page dedicated to &PRODUCT; and &JOY2TOUCH;, including preset controller maps for popular games and controllers. The controller maps for iCade are compatible with most basic MAME emulated games.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>iControlPad Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>I can not connect the ICP to my device</para>
+          </question>
+          <answer>
+            <orderedlist>
+              <listitem>
+                <para>Correctly pair the ICP using the Bluetooth settings of your device.</para>
+              </listitem>
+              <listitem>
+                <para>On the ICP, press <keycombo>
+                    <keycap>Y</keycap>
+                    <keycap>START</keycap>
+                  </keycombo> to activate the SPP mode.</para>
+              </listitem>
+              <listitem>
+                <para>Press SEARCH in the &PRODUCT; main screen to detect the controller.</para>
+              </listitem>
+            </orderedlist>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>Sometimes the button mapping is wrong.</para>
+          </question>
+          <answer>
+            <para>.THis is caused by the ICP occasionally sending an incorrect first byte in the data stream. To correct the issue, disconnect (unpair) the ICP and reconnect. This issue will hopefully be reduced by iControl code optimization implemented in v6.0 of &PRODUCT;.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>PhoneJoy Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>Where are some tutorials for setting up this controller? </para>
+          </question>
+          <answer>
+            <para>The official website has a screen-by-screen tutorial. View it at <ulink url="http://www.phonejoy.us/support/getting-started/android/usbbt-joystick-center/"/> .</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>Why are the analog pads not working on the PhoneJoy controller? </para>
+          </question>
+          <answer>
+            <para>You must enable the analog pads on the controller first, by pressing the &quot;Analog&quot; button on the PhoneJoy joystick. You have activated Analog mode successfully when the LED indicator is lit.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>PS3 Sixaxis Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>I have a &quot;third party&quot; PS3 Sixaxis controller, but it isn&apos;t being detected by  &PRODUCT;. Why?</para>
+          </question>
+          <answer>
+            <para>Third-party PS3 controllers do not work with &PRODUCT;. You must use an original PS3 controller from Sony. </para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>I have an original PS3 Sixaxis controller made by Sony, but it can not be found by &PRODUCT;. What do I need to do to make it work?</para>
+          </question>
+          <answer>
+            <para>You can not use the standard Bluetooth stack in phones and tables with PS3 controllers because of the enhanced data rate it needs to send signals. You need to use a USB Bluetooth Cambridge Silicon Radio (CSR) &quot;2.x/EDR+&quot; Dongle so the PS3 controller has the correct enhanced data rate tunnel. An example of such a dongle is <ulink url="http://dx.com/p/ultra-mini-bluetooth-2-1-edr-usb-2-0-dongle-37665"/></para>
+            <orderedlist>
+              <listitem>
+                <para>Plug in the USB Dongle. </para>
+              </listitem>
+              <listitem>
+                <para>Press the <guibutton>SEARCH</guibutton> button in  &PRODUCT;. The Bluetooth MAC address is stored. </para>
+              </listitem>
+              <listitem>
+                <para>If you are using a USB hub, plug in the PS3 Controller using a USB cable. Otherwise unplug the USB dongle and plug in the PS3 Controller.</para>
+              </listitem>
+              <listitem>
+                <para>Tap <guibutton>SEARCH</guibutton> again to detect the PS3 Controller. The joystick button appears in the main screen.</para>
+              </listitem>
+              <listitem>
+                <para>Tap the <guibutton>P</guibutton> button on the PS3 Joystick button to pair the PS3 Joystick to the USB Dongle MAC address.</para>
+              </listitem>
+              <listitem>
+                <para>Unplug the PS3 Joystick from the USB hub or device. Ensure the USB Dongle is plugged back into the device.</para>
+              </listitem>
+              <listitem>
+                <para>Tap <guibutton>SEARCH</guibutton> again. </para>
+                <para>When the text &quot;Searching for PS3&quot; displays, press the PS button on the PS3 Controller to activate Bluetooth pairing. </para>
+              </listitem>
+            </orderedlist>
+            <para>The controller should now be paired as a USB joystick.</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>So I have followed the instructions above to pair the PS3 controller using a Bluetooth dongle, but it doesn&apos;t work.</para>
+          </question>
+          <answer>
+            <para>Have you tried disconnecting and reconnecting the dongle, and trying to search again?</para>
+            <para>If that fails, you may need to hard reset your PS3 controller using a pin or paper clip to press the reset switch. Once you have reset the controller, repeat the pairing process again.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>Wii Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para> Where are some tutorials for setting up this controller?</para>
+          </question>
+          <answer>
+            <para>The <ulink url="http://wiki.greenrobotgamer.com/techsupport/usingusbjoy.php">Green Robot Gamer</ulink> has a page dedicated to &PRODUCT; and &JOY2TOUCH;, including preset controller maps for popular games and controllers. The controller maps are compatible with the Nintendo Wii Controller and the additional Nintendo Wii  Classic Controller.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>XBox360 Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>When I try to pair an XBox360 wireless receiver to my device, nothing happens when I tap SEARCH. How can I fix this?</para>
+          </question>
+          <answer>
+            <para> You need to ensure you first pair the X360 Wireless Joystick with the X360 Wireless Receiver.</para>
+            <para>Once you have done that, tap  <guibutton>SEARCH</guibutton> and move the analog stick of the X360 Wireless Joystick so the wireless receiver detects the controller is &quot;on&quot;.</para>
+          </answer>
+        </qandaentry>
+        <qandaentry>
+          <question>
+            <para>I have a X360 Wireless Joystick, but I can not pair it with my device. How can I fix this?</para>
+          </question>
+          <answer>
+            <para>X360 controllers, like PS3 Sixaxis controllers, do not work with standard Android Bluetooth stacks, and require a special dongle to work. Purchase the Microsoft USB Wireless Gaming Adapter. </para>
+            <para>Ensure you first pair the wireless controller with the USB Wireless Gaming Adapter before attempting to pair the controller with &PRODUCT;.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
   </chapter>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Revision_History.xml"/>
 </book>
