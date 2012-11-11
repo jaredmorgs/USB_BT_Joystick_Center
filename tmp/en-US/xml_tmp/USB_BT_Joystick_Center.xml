@@ -171,7 +171,7 @@
       </step>
     </procedure>
     <note>
-      <para>If you are having problems detecting the controller using Bluetooth, refer to the section that relates to your controller in <xref linkend="FAQ_About_Controllers"/> for help with troubleshooting.</para>
+      <para>If you are having problems detecting the controller, refer to the section that relates to your controller in <xref linkend="FAQ_About_Controllers"/> for help with troubleshooting.</para>
     </note>
   </chapter>
   <chapter id="Map_Buttons">
@@ -196,7 +196,7 @@
           <para>Tap the <guibutton>IMP</guibutton> button to display a list of available controller maps.  </para>
         </step>
         <step>
-          <para>Tap the controller map tile you want to load.</para>
+          <para>Tap the controller map tile you want to load.</para>
           <para>The current controller map is overwritten with the data from the imported controller map.</para>
         </step>
       </procedure>
@@ -215,7 +215,7 @@
           <para>Tap the <guibutton>IMP</guibutton> button to display a list of available controller maps.  </para>
         </step>
         <step>
-          <para>Tap the controller map tile you want to load.</para>
+          <para>Tap the controller map tile you want to load.</para>
           <para>The current controller map is overwritten with the data from the imported controller map.</para>
         </step>
       </procedure>
@@ -232,7 +232,7 @@
         </step>
         <step>
           <para>To ensure the exported controller map is displayed when you next import, prefix the filename with the controller type. </para>
-          <para>For example <filename>Wii-[controller-type]-[game_name].xml</filename></para>
+          <para>For example <filename>Wii-[controller-type]-[game_name].xml</filename></para>
         </step>
         <step>
           <para/>
@@ -253,7 +253,7 @@
           <para>Once the controller is detected, tap the controller tile on the main screen.</para>
         </step>
         <step>
-          <para>To check how a key is mapped, press and hold the key on the controller.</para>
+          <para>To check how a key is mapped, press and hold the key on the controller.</para>
           <para>The pressed key is displayed  in the key map. </para>
         </step>
         <step>
@@ -473,6 +473,49 @@
     <section>
       <title>General Controller Questions</title>
       <qandaset>
+        <qandaentry>
+          <question>
+            <para>When I try to connect my USB controller to &PRODUCT;, it is never found. What can I do to fix this?</para>
+          </question>
+          <answer>
+            <para>It is possible that your controller&apos;s ProductID is not registered. To remedy this, you need to add the VendorID and ProductID of the controller manually to <filename>/sdcard/UsbJoyData/usb_device_ids.txt</filename>. &PRODUCT; v6.43 and higher supports this function.</para>
+            <orderedlist>
+              <listitem>
+                <para>Download the <ulink url="http://poke64738.iphpbb3.com/forum/download/file.php?nxu=26454250nx52440&amp;id=30">USB Joystick Analyzer Zip</ulink> from the Help Forum.</para>
+              </listitem>
+              <listitem>
+                <para>Install the <filename>AndroidUSBJoystickAnalyzer.apk</filename> to your device, and open the application.</para>
+              </listitem>
+              <listitem>
+                <para>Connect the USB controller to your device and using the application, search for the controller.</para>
+              </listitem>
+              <listitem>
+                <para>When your controller is detected by the application, note down the four-digit VendorID and ProductID.</para>
+              </listitem>
+              <listitem>
+                <para>Open <filename>/sdcard/UsbJoyData/usb_device_ids.txt</filename>. Read the information at the top of the file to understand how to format the text inside (the formatting is important).</para>
+              </listitem>
+              <listitem>
+                <para>Search for the VendorID number in the file to ensure the new entry is grouped and sorted correctly.</para>
+                <note>
+                  <para>It is highly likely that the VendorID is already present in the file, but the Product ID (the specific code given to the missing controller) is not.</para>
+                </note>
+              </listitem>
+              <listitem>
+                <para>Add the new ProductID under the VendorID entry, using the formatting present in the text file (preserving the indents). For example:</para>
+                <programlisting>057e Nintendo Co., Ltd
+  0306 Wii Remote Controller RVL-003
+  xxxx Your New Device Here</programlisting>
+              </listitem>
+              <listitem>
+                <para>Save and close the file.</para>
+              </listitem>
+              <listitem>
+                <para>Restart &PRODUCT; and tap <guibutton>SEARCH</guibutton> to detect the controller.</para>
+              </listitem>
+            </orderedlist>
+          </answer>
+        </qandaentry>
         <qandaentry>
           <question>
             <para>I am using a version of Android below ICS 4.0.2, and I can not make &PRODUCT; detect any USB Joysticks. How do I solve this?</para>
