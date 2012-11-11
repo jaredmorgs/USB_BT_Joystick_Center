@@ -10,13 +10,13 @@
   <productnumber>6</productnumber>
   <edition>1</edition>
   <abstract>
-    <para>This guide will help you initially set up USB BT Joystick Center
- and Joy2Touch Server on your Android device. After initially setting up the product, further instructions about configuring both products are discussed in detail.  </para>
+    <para>This guide will help you initially set up &PRODUCT;
+on your Android device. After initially setting up the product, further instructions about configuring the product are discussed in detail.  </para>
   </abstract>
   <corpauthor>
     <inlinemediaobject>
       <imageobject>
-        <imagedata fileref="images/J2T.png" format="PNG" align="center"/>
+        <imagedata align="center" fileref="images/J2T.png" format="PNG"/>
       </imageobject>
     </inlinemediaobject>
   </corpauthor>

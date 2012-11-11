@@ -171,7 +171,7 @@
       </step>
     </procedure>
     <note>
-      <para>If you are having problems detecting the controller, refer to the section that relates to your controller in <xref linkend="FAQ_About_Controllers"/> for help with troubleshooting.</para>
+      <para>If you are having problems detecting the controller, refer to  <xref linkend="FAQ_About_Controllers"/> for help with troubleshooting.</para>
     </note>
   </chapter>
   <chapter id="Map_Buttons">
@@ -589,6 +589,19 @@
           </question>
           <answer>
             <para>.THis is caused by the ICP occasionally sending an incorrect first byte in the data stream. To correct the issue, disconnect (unpair) the ICP and reconnect. This issue will hopefully be reduced by iControl code optimization implemented in v6.0 of &PRODUCT;.</para>
+          </answer>
+        </qandaentry>
+      </qandaset>
+    </section>
+    <section>
+      <title>Keyboard Questions</title>
+      <qandaset>
+        <qandaentry>
+          <question>
+            <para>I keep tapping SEARCH when my keyboard is connected, but no matter what I do, I can not seem to get my keyboard dock, USB or Bluetooth keyboard to be detected in &PRODUCT;. What do I need to do?</para>
+          </question>
+          <answer>
+            <para>Keyboards can not be detected using the <guibutton>SEARCH</guibutton> button. To detect keyboards, you need to first enable the <guibutton>IME</guibutton> slider and while the menu is displayed, press <keycap>Spacebar</keycap> on the keyboard. This sequence activates search mode for keyboards. </para>
           </answer>
         </qandaentry>
       </qandaset>
