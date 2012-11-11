@@ -38,7 +38,7 @@
         </note>
       </listitem>
       <listitem>
-        <para>Tap <guibutton>SEARCH</guibutton> in the Main Screen if the controller is not already detected.</para>
+        <para>Tap <guibutton>SEARCH</guibutton> in the Main Screen if the controller is not already detected. For keyboards, follow the steps in <xref linkend="FAQ_Keyboard"/>.</para>
       </listitem>
       <listitem>
         <para>Once the controller is detected, tap the controller icon.</para>
@@ -243,7 +243,7 @@
     <section id="Physical_Controller_Support">
       <title>Physical Controller Support</title>
       <para>Games that feature physical controller support are almost &quot;plug and play&quot; with &PRODUCT;. All you should need to do is map the physical controller keys to the virtual keys on your joystick.</para>
-      <para>If you load a pre-configured map file, most of the primary buttons should be mapped for you. If some buttons are not mapped to your liking, follow </para>
+      <para>If you load a pre-configured map file, most of the primary buttons should be mapped for you. If some buttons are not mapped to your liking, follow <xref linkend="proc-Mapping_Physical_Controller_Keys"/></para>
       <procedure id="proc-Mapping_Physical_Controller_Keys">
         <title>Mapping and Testing Physical Controller Keys</title>
         <step>
@@ -289,7 +289,7 @@
   </chapter>
   <chapter id="FAQ_About_Phones_Tablets">
     <title>Frequently Asked Questions About Phones and Tablets</title>
-    <section>
+    <section id="FAQ_General_Device">
       <title>General Questions</title>
       <qandaset>
         <qandaentry>
@@ -377,7 +377,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_HTC">
       <title>HTC Questions</title>
       <qandaset>
         <qandaentry>
@@ -400,7 +400,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_Nexus">
       <title>Nexus Questions</title>
       <qandaset>
         <qandaentry>
@@ -413,7 +413,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_Samsung">
       <title>Samsung Questions</title>
       <qandaset>
         <qandaentry>
@@ -445,7 +445,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_XPeria_Play">
       <title>XPeria Play Questions</title>
       <qandaset>
         <qandaentry>
@@ -470,7 +470,7 @@
   </chapter>
   <chapter id="FAQ_About_Controllers">
     <title>Frequently Asked Questions About Controllers</title>
-    <section>
+    <section id="FAQ_General_Controller">
       <title>General Controller Questions</title>
       <qandaset>
         <qandaentry>
@@ -546,7 +546,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_iCade">
       <title>iCade Questions</title>
       <qandaset>
         <qandaentry>
@@ -559,7 +559,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_iControlPad">
       <title>iControlPad Questions</title>
       <qandaset>
         <qandaentry>
@@ -593,7 +593,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_Keyboard">
       <title>Keyboard Questions</title>
       <qandaset>
         <qandaentry>
@@ -606,7 +606,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_PhoneJoy">
       <title>PhoneJoy Questions</title>
       <qandaset>
         <qandaentry>
@@ -627,7 +627,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_PS3_Sixaxis">
       <title>PS3 Sixaxis Questions</title>
       <qandaset>
         <qandaentry>
@@ -682,7 +682,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_Wii">
       <title>Wii Questions</title>
       <qandaset>
         <qandaentry>
@@ -695,7 +695,7 @@
         </qandaentry>
       </qandaset>
     </section>
-    <section>
+    <section id="FAQ_XBox360">
       <title>XBox360 Questions</title>
       <qandaset>
         <qandaentry>
