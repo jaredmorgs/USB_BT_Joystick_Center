@@ -426,6 +426,22 @@
 
 			</procedure>
 			
+			 <important>
+				<title>JoyPrefsFile Extension is Critically Important</title>
+				 <para>
+					Do not <emphasis>ever</emphasis> delete the JoyPrefsFile string that &PRODUCT; automatically appends to the end of an exported controller map file name.
+				</para>
+				 <para>
+					The application classes files with this extension as valid, custom controller maps, and uses the numbers in the file name to allocate the map to the correct controller hardware .
+				</para>
+				 <para>
+					If you decide to change the exported file name by renaming your controller map without the JoyPrefsFile string, the application will not detect the file as a valid map.
+				</para>
+				 <para>
+					Custom controller maps always have the <filename>_0.xml</filename> number at the end. All other controller maps with <filename>_1.xml</filename> and higher are factory shipped controller maps.
+				</para>
+
+			</important>
 			 <procedure id="proc-Export_Controller_Maps">
 				<title>Export Controller Maps</title>
 				 <step>
@@ -457,8 +473,6 @@
 				</step>
 				 <step>
 					<para>
-					</para>
-					 <para>
 						Tap <guibutton>OK</guibutton> to export the controller map to the specified location.
 					</para>
 
