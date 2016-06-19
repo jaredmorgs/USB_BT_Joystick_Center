@@ -1,0 +1,11 @@
+= USB/BT Joystick Center
+
+You've stumbled across the very outdated documentation for the _USB/BT Joystick Center 6_ Android App.
+
+This app is long since abandoned by the developer, and you need to get a license key from his server to use it. 
+
+I don't believe the licensing server is still running. 
+
+== Building This Documentation
+
+You need to use the `publican` toolchain. It is only available on the Fedora OS (if you want a supported version).
